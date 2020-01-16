@@ -351,6 +351,7 @@
           exp.push("(");
           array.forEach(ids, function(id, num){
             exp.push("FID = " + id);
+            console.log("ID: " + id);
             if(num !== ids.length - 1){
               exp.push("OR");
             }
