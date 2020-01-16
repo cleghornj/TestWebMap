@@ -351,8 +351,13 @@
           var exp = [];
           exp.push("(");
           array.forEach(ids, function(id, num){
-            exp.push("FID = " + id);
-            console.log("ID: " + id);
+            try{
+              exp.push("FID = " + id);
+              console.log("ID: " + id);
+            }
+            catch{
+              console.log("OOPS");
+            }
             if(num !== ids.length - 1){
               exp.push("OR");
             }
