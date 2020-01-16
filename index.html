@@ -350,7 +350,7 @@
           var exp = [];
           exp.push("(");
           array.forEach(ids, function(id, num){
-            exp.push("OBJECTID = " + id);
+            exp.push("FID = " + id);
             if(num !== ids.length - 1){
               exp.push("OR");
             }
