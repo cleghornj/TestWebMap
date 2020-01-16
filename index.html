@@ -110,15 +110,15 @@
       var qt = new QueryTask(url);
 
       var map = new Map("esri-map-container", {
-        basemap: "gray",
+        basemap: "dark-gray",
         center: [-86.9253288,36.186836],
-        zoom: 13
+        zoom: 10
       });
 
       var busySpinner = dom.byId("spinner");
 
       var bt = new BasemapToggle({
-        basemap: "dark-gray",
+        basemap: "gray",
         map: map
       }, "basemapToggle-container");
       bt.startup();
