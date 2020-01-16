@@ -346,20 +346,17 @@
 
         qt.executeForIds(params, function(ids){
 
-          // Generate SQL expression for querying for features whose OBJECTIDs
+          // Generate SQL expression for querying for features whose FIDs
           // match those that are within the desired extent
           var exp = [];
           exp.push("(");
           array.forEach(ids, function(id, num){
-            try{
-              exp.push("FID = " + id);
-              console.log("ID: " + id);
-            }
-            catch{
-              console.log("OOPS");
-            }
+            exp.push("FID = " + id);
+            console.log("ID: " + id);
+
             if(num !== ids.length - 1){
               exp.push("OR");
+            console.log(exp);
             }
           });
           exp.push(")");
